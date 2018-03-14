@@ -1,0 +1,13 @@
+commands.repair.usage=/repair
+commands.repair.item=Item
+commands.repair.repaired=repaired
+commands.repair.noDamage=isn't damaged
+commands.repair.canNotRepair=can't be repaired
+commands.repair.handEmpty=Main hand is empty
+
+commands.cleanse.inventory=Inventory cleared
+commands.cleanse.armor=Armor cleared
+commands.cleanse.hotbar=Hotbar cleared
+commands.cleanse.potions=Potions cleared
+
+commands.yell.yelling=yelling

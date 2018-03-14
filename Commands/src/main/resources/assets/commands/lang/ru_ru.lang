@@ -1,0 +1,13 @@
+commands.repair.usage=/repair
+commands.repair.item=Предмет
+commands.repair.repaired=отремонтирован
+commands.repair.noDamage=не повреждён
+commands.repair.canNotRepair=не может быть отремонтирован
+commands.repair.handEmpty=Нет предмета для ремонта!
+
+commands.cleanse.inventory=Инвентарь очищен
+commands.cleanse.armor=Броня очищена
+commands.cleanse.hotbar=Хотбар очищен
+commands.cleanse.potions=Активные эффекты очищены
+
+commands.yell.yelling=кричит
