@@ -1,0 +1,29 @@
+#Potion Effects
+effect.potions:vanish=Vanish
+
+effect.potions:cure=Cure
+
+effect.potions:equilibrium=Equilibrium
+
+effect.potions:iron_skin=Iron Skin
+
+#Potions
+potion.effect.potions:vanish=Potion of Vanish
+splash_potion.effect.potions:vanish=Splash Potion of Vanish
+lingering_potion.effect.potions:vanish=Lingering Potion of Vanish
+
+potion.effect.potions:cure=Potion of Cure
+splash_potion.effect.potions:cure=Splash Potion of Cure
+lingering_potion.effect.potions:cure=Lingering Potion of Cure
+
+potion.effect.potions:equilibrium=Potion of Equilibrium
+splash_potion.effect.potions:equilibrium=Splash Potion of Equilibrium
+lingering_potion.effect.potions:equilibrium=Lingering Potion of Equilibrium
+
+potion.effect.potions:iron_skin=Potion of Iron Skin
+splash_potion.effect.potions:iron_skin=Splash Potion of Iron Skin
+lingering_potion.effect.potions:iron_skin=Lingering Potion of Iron Skin
+
+potion.effect.retreat=Potion of Retreat
+splash_potion.effect.retreat=Splash Potion of Retreat
+lingering_potion.effect.retreat=Lingering Potion of Retreat

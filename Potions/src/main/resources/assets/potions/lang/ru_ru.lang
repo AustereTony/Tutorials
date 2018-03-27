@@ -1,0 +1,29 @@
+#Эффекты Зелий
+effect.potions:vanish=Исчезновение
+
+effect.potions:cure=Противоядие
+
+effect.potions:equilibrium=Равноценный обмен
+
+effect.potions:iron_skin=Железная Кожа
+
+#Зелья
+potion.effect.potions:vanish=Зелье Исчезновения
+splash_potion.effect.potions:vanish=Взрывное Зелье Исчезновения
+lingering_potion.effect.potions:vanish=Оседающее Зелье Исчезновения
+
+potion.effect.potions:cure=Противоядие
+splash_potion.effect.potions:cure=Взрывное Противоядие
+lingering_potion.effect.potions:cure=Оседающее Противоядие
+
+potion.effect.potions:equilibrium=Зелье Равноценного обмена
+splash_potion.effect.potions:equilibrium=Взрывное Зелье Равноценного обмена
+lingering_potion.effect.potions:equilibrium=Оседающее Зелье Равноценного обмена
+
+potion.effect.potions:iron_skin=Зелье Железной Кожи
+splash_potion.effect.potions:iron_skin=Взрывное Зелье Железной Кожи
+lingering_potion.effect.potions:iron_skin=Оседающее Зелье Железной Кожи
+
+potion.effect.retreat=Зелье Отступления
+splash_potion.potions:retreat=Взрывное Зелье Отступления
+lingering_potion.potions:retreat=Оседающее Зелье Отступления
