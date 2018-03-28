@@ -1,0 +1,9 @@
+[
+{
+  "modid": "commands",
+  "name": "Commands",
+  "description": "Commands example",
+  "version": "1.0",
+  "mcversion": "1.7.10"
+}
+]
