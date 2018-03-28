@@ -122,10 +122,4 @@ public class CommandRepair extends CommandBase {
 			player.addChatMessage(chatMessage);//Вывод сообщения для игрока, вызвавшего команду.					
 		}
 	}
-	
-    //Перед выполнением команды происходит вызов этого метода для проверки наличия прав на использование.
-    /*public boolean checkPermission(MinecraftServer server, ICommandSender sender) {
-    	
-        return sender instanceof EntityPlayer ? server.getPlayerList().canSendCommands(((EntityPlayer) sender).getGameProfile()) : false;//Если игрок опнут (opped), то он может использовать команду.
-    }*/
 }
