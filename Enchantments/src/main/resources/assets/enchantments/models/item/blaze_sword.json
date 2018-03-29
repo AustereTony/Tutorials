@@ -1,0 +1,6 @@
+{
+    "parent": "item/handheld",
+    "textures": { 
+        "layer0": "enchantments:items/weapon/blaze_sword"
+    }
+}

@@ -1,0 +1,15 @@
+#Вкладки
+itemGroup.tab_enchantments=Чары
+
+#Чары
+enchantment.safe_fall=Безопасное Падение
+enchantment.smelting=Переплавка
+enchantment.keen_blade=Острое Лезвие
+
+#Предметы
+item.blaze_pickaxe.name=Огненная Кирка
+item.blaze_axe.name=Огненный Топор
+item.blaze_shovel.name=Огненная Лопата
+item.blaze_hoe.name=Огненная Мотыга
+
+item.blaze_sword.name=Огненный Меч
