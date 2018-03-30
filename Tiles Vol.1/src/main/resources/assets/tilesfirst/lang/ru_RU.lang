@@ -1,0 +1,12 @@
+#Вкладки
+itemGroup.tab_tiles_v1=Тайлы
+
+#Блоки
+tile.counter.name=Блок-счётчик
+tile.counter_personal.name=Личный счётчик
+
+#Сообщения
+tile.counter.current=Сервер: Счётчик - %s
+tile.counter.owner=Клиент: %s, ты являешься владельцем.
+tile.counter.imposter=Клиент: Ты самозванец, этот блок принадлежит %s!
+

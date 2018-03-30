@@ -1,0 +1,11 @@
+#Tabs
+itemGroup.tab_tiles_v1=Tiles
+
+#Blocks
+tile.counter.name=Counter
+tile.counter_personal.name=Personal counter
+
+#Messages
+tile.counter.current=Server: Counter - %s
+tile.counter.owner=Client: %s, you are owner.
+tile.counter.imposter=Client: You are imposter, this block belongs to %s!
