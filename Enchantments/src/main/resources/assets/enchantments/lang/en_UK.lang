@@ -1,0 +1,17 @@
+#Tabs
+itemGroup.tab_enchantments=Enchantments
+
+#Enchantments
+enchantment.safe_fall=Safe Fall
+enchantment.smelting=Smelting
+enchantment.keen_blade=Keen Blade
+
+#Items
+item.blaze_pickaxe.name=Blaze Pickaxe
+item.blaze_axe.name=Blaze Axe
+item.blaze_shovel.name=Blaze Shovel
+item.blaze_hoe.name=Blaze Hoe
+
+item.blaze_sword.name=Blaze Sword
+
+
