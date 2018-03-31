@@ -8,12 +8,7 @@ import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import cpw.mods.fml.common.registry.GameRegistry;
-import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
-import ru.austeretony.tilesfirst.block.BlockCounter;
-import ru.austeretony.tilesfirst.block.BlockCounterPersonal;
 import ru.austeretony.tilesfirst.main.tab.TabTiles;
 import ru.austeretony.tilesfirst.proxy.CommonProxy;
 
@@ -34,16 +29,6 @@ public class TilesMain {
     public static CommonProxy proxy;
     
 	public static final CreativeTabs TILES = new TabTiles(CreativeTabs.getNextID(), "tab_tiles_v1");
-	
-	public static final Block
-	COUNTER = new BlockCounter("counter", Material.rock, 5.0F, 5.0F, Block.soundTypeStone).setCreativeTab(TilesMain.TILES),
-	COUNTER_PERSONAL = new BlockCounterPersonal("counter_personal", Material.rock, 10.0F, 10.0F, Block.soundTypeStone).setCreativeTab(TilesMain.TILES);
-	
-	public static final Block[] BLOCKS = new Block[] {
-			
-			COUNTER,
-			COUNTER_PERSONAL
-	};
 
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
@@ -52,7 +37,7 @@ public class TilesMain {
         
     	this.proxy.preInit(event);    	  	
     	
-    	this.registerBlocks(BLOCKS);
+    	BlocksRegistry.register();
      }
 
     @EventHandler
@@ -64,13 +49,5 @@ public class TilesMain {
     public static Logger logger() {
     	
     	return logger;
-    }
-    
-    private void registerBlocks(Block... blocks) {
-    	
-		for (int i = 0; i < blocks.length; i++) {
-
-			GameRegistry.registerBlock(blocks[i], blocks[i].getUnlocalizedName());
-		}
     }
 }

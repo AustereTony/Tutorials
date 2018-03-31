@@ -2,7 +2,7 @@ package ru.austeretony.tilesfirst.main.tab;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
-import ru.austeretony.tilesfirst.main.TilesMain;
+import ru.austeretony.tilesfirst.main.BlocksRegistry;
 
 public class TabTiles extends CreativeTabs {
 
@@ -14,6 +14,6 @@ public class TabTiles extends CreativeTabs {
 	@Override
 	public Item getTabIconItem() {
 		
-		return Item.getItemFromBlock(TilesMain.COUNTER);
+		return Item.getItemFromBlock(BlocksRegistry.COUNTER);
 	}
 }
