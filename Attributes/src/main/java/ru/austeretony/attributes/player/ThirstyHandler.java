@@ -38,7 +38,7 @@ public class ThirstyHandler {
     //Устанавливает текущее значение жажды.
 	public static void setThirsty(EntityPlayer player, float value) {	
 		
-		player.getDataManager().set(PropertiesRegistry.THIRSTY, (float) MathHelper.clamp(value, 0.0, getThirstyMax(player)));
+		player.getDataManager().set(PropertiesRegistry.THIRSTY, MathHelper.clamp(value, 0.0F, getThirstyMax(player)));
 	}
 	
 	//Сбрасывает значение жажды.
@@ -50,13 +50,13 @@ public class ThirstyHandler {
 	//Уменьшает жажду на указанную величину.
 	public static void decreaseThirsty(EntityPlayer player, float value) {
 		
-		player.getDataManager().set(PropertiesRegistry.THIRSTY, MathHelper.clamp(getThirsty(player) + value, 0, (float) getThirstyMax(player)));	
+		player.getDataManager().set(PropertiesRegistry.THIRSTY, MathHelper.clamp(getThirsty(player) + value, 0.0F, getThirstyMax(player)));	
 	}
 	
 	//Увеличивает жажду на указанную величину.
 	public static void increaseThirsty(EntityPlayer player, float value) {
 
-		player.getDataManager().set(PropertiesRegistry.THIRSTY, MathHelper.clamp(getThirsty(player) - value, 0, (float) getThirstyMax(player)));
+		player.getDataManager().set(PropertiesRegistry.THIRSTY, MathHelper.clamp(getThirsty(player) - value, 0.0F, getThirstyMax(player)));
 	}
 	
 	//Сохранение значения жажды в NBT игрока.
@@ -75,14 +75,20 @@ public class ThirstyHandler {
 	
 	@SubscribeEvent
 	public static void onPlayerLogIn(PlayerLoggedInEvent event) {
+		
+		AttributesMain.logger().info("Player logging in...");
 							
-		setThirsty(event.player, loadThirstyFromNBT(event.player));//Загрузка значения жажды из NBT при входе на сервер (срабатывает для физического и логического серверов).
+		//Загрузка значения жажды из NBT при входе на сервер (срабатывает для физического и логического серверов).
+		setThirsty(event.player, loadThirstyFromNBT(event.player));
 	}
 	
 	@SubscribeEvent
 	public static void onPlayerLogOut(PlayerLoggedOutEvent event) {
-								
-		saveThirstyToNBT(event.player);//Сохранение значения жажды в NBT игрока при выходе.
+		
+		AttributesMain.logger().info("Player logging out...");
+		
+		//Сохранение значения жажды в NBT игрока при выходе.
+		saveThirstyToNBT(event.player);
 	}
     
 	@SubscribeEvent
@@ -139,7 +145,7 @@ public class ThirstyHandler {
 				
 				else if (event.getItem().getItem() == Items.GOLDEN_APPLE || event.getItem().getMetadata() == 1) {
 										
-					player.addPotionEffect(new PotionEffect(PotionsRegistry.WETTING, 8400));//Эффект "Насыщение" на 7 минут при съедании зачарованного яблока.
+					player.addPotionEffect(new PotionEffect(PotionsRegistry.WETTING, 6000));//Эффект "Насыщение" на 5 минут при съедании зачарованного яблока.
 					
 					decreaseThirsty(player, 10.0F);//Уменьшение жажды при съедании зачарованного яблока на 10 ед.
 				}
@@ -153,7 +159,8 @@ public class ThirstyHandler {
 		if (event.getEntityLiving() instanceof EntityPlayer) {
 			
 			if (event.getEntityLiving().isPotionActive(PotionsRegistry.WETTING)) {
-												
+									
+				//Требуется для синхронизации максимального значения с клиентом.
 				event.getEntityLiving().getActivePotionEffect(PotionsRegistry.WETTING).getPotion().removeAttributesModifiersFromEntity(event.getEntityLiving(), event.getEntityLiving().getAttributeMap(), 0);;		
 			}
 		}

@@ -17,6 +17,8 @@ public class PotionWetting extends PotionBase {
 	
 	public static final UUID THIRSTY_MODIFIER_UUID = UUID.fromString("0ec2fc39-b7d8-4f22-977a-b5b2a57b6d55");
 	
+	public static final AttributeModifier THIRSTY_MODIFIER = new AttributeModifier(THIRSTY_MODIFIER_UUID, PropertiesRegistry.THIRSTY_MAX.getName(), 6.0D, 0);
+	
 	public PotionWetting(String potionName, boolean isBadEffect, int liquidColor) {
 		
 		super(potionName, isBadEffect, liquidColor);
@@ -27,7 +29,7 @@ public class PotionWetting extends PotionBase {
     	
 		if (entityLivingBase instanceof EntityPlayer) {
 						
-			attributeMap.getAttributeInstance(PropertiesRegistry.THIRSTY_MAX).applyModifier(new AttributeModifier(this.THIRSTY_MODIFIER_UUID, PropertiesRegistry.THIRSTY_MAX.getName(), 6.0D, 0));
+			attributeMap.getAttributeInstance(PropertiesRegistry.THIRSTY_MAX).applyModifier(THIRSTY_MODIFIER);
 		}
     }
     
@@ -36,10 +38,10 @@ public class PotionWetting extends PotionBase {
     	
 		if (entityLivingBase instanceof EntityPlayer) {
 						
-			attributeMap.getAttributeInstance(PropertiesRegistry.THIRSTY_MAX).removeModifier(this.THIRSTY_MODIFIER_UUID);
+			attributeMap.getAttributeInstance(PropertiesRegistry.THIRSTY_MAX).removeModifier(this.THIRSTY_MODIFIER);
 			
 			//Обновление текущего значения для вызова синхронизации с клиентом (по завершению
-			//эффекта или при смерти клиент не получает обновленное значение самостоятельно).
+			//эффекта клиент не получает обновленное значение самостоятельно).
 			ThirstyHandler.setThirsty((EntityPlayer) entityLivingBase, ThirstyHandler.getThirsty((EntityPlayer) entityLivingBase));
 		}
     }

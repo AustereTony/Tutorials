@@ -28,6 +28,8 @@ public class PropertiesRegistry {
 		
 		if (event.getEntity() instanceof EntityPlayer) {
 			
+			AttributesMain.logger().info("Player constructing...");
+			
 			EntityPlayer player = (EntityPlayer) event.getEntity();		
 					
 			//Жажда
