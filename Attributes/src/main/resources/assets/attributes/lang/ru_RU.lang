@@ -1,0 +1,6 @@
+#Эффекты зелий
+effect.attributes:wetting=Насыщение
+effect.attributes:looting=Грабёж
+
+#Запас монет
+currency.recieved=Вы получили %s монет!

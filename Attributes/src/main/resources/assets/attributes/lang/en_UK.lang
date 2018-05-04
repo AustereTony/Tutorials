@@ -1,0 +1,6 @@
+#Potions
+effect.attributes:wetting=Wetting
+effect.attributes:looting=Looting
+
+#Currency
+currency.recieved=You recieved %s coins!

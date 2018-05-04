@@ -1,0 +1,16 @@
+[
+{
+  "modid": "attributes",
+  "name": "Attributes",
+  "description": "Attributes system and Data Watcher usage examples.",
+  "version": "1.0.0",
+  "mcversion": "1.7.10",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["AustereTony"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
