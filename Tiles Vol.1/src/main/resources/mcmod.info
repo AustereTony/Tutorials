@@ -1,0 +1,15 @@
+[
+{
+  "modid": "tilesfirst",
+  "name": "Tiles Vol.1",
+  "description": "Tile entities usage example, vol. 1",
+  "version": "1.0",
+  "mcversion": "1.12.2",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["AustereTony"],
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
